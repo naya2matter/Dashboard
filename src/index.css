@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import "tailwindcss";
+
+
+@theme{
+    --font-nunito:"Nunito Sans", sans-serif;
+    --color-dark-mainBackground: #253143;
+    --color-dark-mainText: #FFFFFF
+    
+}
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 
+aside .active::before{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #4880FF;
+    top: 0;
+    left: -29px;
+} */
+
