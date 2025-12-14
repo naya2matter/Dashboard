@@ -1,73 +1,163 @@
-# React + TypeScript + Vite
+🛒 DashStack – Products Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and professional Admin Dashboard built with React + TypeScript, featuring full authentication, products management (CRUD), search, pagination, dark/light mode, and a reusable component-based architecture.
 
-Currently, two official plugins are available:
+🚀 Features
+🔐 Authentication
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Login & Register with API integration
 
-## React Compiler
+Backend-required device_id handling
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Token-based authentication (stored in localStorage)
 
-## Expanding the ESLint configuration
+Secure logout with confirmation modal
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📦 Products Management
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Fetch products from API
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Create new products
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Edit existing products
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Delete products with confirmation modal
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Upload product images (multipart/form-data)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔍 Search
+
+Real-time product search
+
+Search integrated with pagination
+
+Automatically resets to page 1 when searching
+
+📄 Pagination (Custom & Reusable)
+
+Client-side pagination
+
+Implemented using:
+
+Custom Hook usePagination
+
+Reusable Component Pagination
+
+Dynamic page count based on filtered data
+
+Active page highlighting
+
+Fully integrated with search results
+
+🌙 UI / UX
+
+Dark / Light mode toggle
+
+Loading spinners for pages & actions
+
+Toast notifications for success & errors
+
+Clean and responsive layout (Tailwind CSS)
+
+🧩 Tech Stack
+
+React
+
+TypeScript
+
+React Router DOM
+
+Axios
+
+Tailwind CSS
+
+React Toastify
+
+React Spinners
+
+🗂️ Project Structure
+src/
+│
+├── Components/
+│   ├── Card.tsx
+│   ├── Confirmation.tsx
+│   ├── Pagination.tsx
+│   ├── ProductForm.tsx
+│
+├── Pages/
+│   ├── Auth/
+│   │   ├── Login.tsx
+│   │   ├── Register.tsx
+│   ├── Dashboard/
+│       ├── Products.tsx
+│       ├── CreateProducts.tsx
+│       ├── EditProducts.tsx
+│
+├── contexts/
+│   ├── ThemeContext.tsx
+│   ├── SearchContext.tsx
+│
+├── hooks/
+│   └── usePagination.ts
+│
+├── interfaces/
+│   └── productInterface.ts
+│
+└── main.tsx
+
+🔁 Pagination Implementation
+Custom Hook – usePagination
+
+Handles:
+
+Current page
+
+Total pages
+
+Paginated data slice
+
+Fully reusable across the app
+
+Pagination Component
+
+Receives:
+
+totalPages
+
+currentPage
+
+onPageChange
+
+Highlights active page
+
+Clean and accessible UI
+
+🧠 Architecture Highlights
+
+Reusable components & hooks
+
+Separation of concerns (UI / logic)
+
+Type-safe interfaces for all API data
+
+Scalable and maintainable structure
+
+Ready for backend pagination or future enhancements
+
+🛠️ Setup & Run
+npm install
+npm run dev
+
+✅ Future Improvements
+
+Backend pagination
+
+Role-based access control
+
+Unit tests for hooks & components
+
+Image optimization & lazy loading
+
+👩‍💻 Author
+
+Built with care and clean architecture as a learning & production-ready dashboard project.
