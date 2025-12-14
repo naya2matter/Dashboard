@@ -1,81 +1,68 @@
-🛒 DashStack – Products Dashboard
+# 🛒 DashStack – Products Dashboard
 
-A modern and professional Admin Dashboard built with React + TypeScript, featuring full authentication, products management (CRUD), search, pagination, dark/light mode, and a reusable component-based architecture.
+A modern and professional **Admin Dashboard** built with **React + TypeScript**, featuring authentication, full product management (CRUD), search, pagination, dark/light mode, and a reusable component-based architecture.
 
-🚀 Features
-🔐 Authentication
+---
 
-Login & Register with API integration
+## 🚀 Features
 
-Backend-required device_id handling
+### 🔐 Authentication
+- Login & Register using REST API
+- Backend-required `device_id` handling
+- Token-based authentication stored in `localStorage`
+- Secure logout with confirmation modal
 
-Token-based authentication (stored in localStorage)
+---
 
-Secure logout with confirmation modal
+### 📦 Products Management (CRUD)
+- Fetch products from API
+- Create new products
+- Edit existing products
+- Delete products with confirmation
+- Upload product images using `multipart/form-data`
 
-📦 Products Management
+---
 
-Fetch products from API
+### 🔍 Search
+- Real-time product search
+- Integrated with pagination
+- Automatically resets to page 1 when search input changes
 
-Create new products
+---
 
-Edit existing products
+### 📄 Pagination (Custom Implementation)
+- Client-side pagination for products
+- Implemented using:
+  - Custom Hook: `usePagination`
+  - Reusable Component: `Pagination`
+- Dynamic total pages based on filtered results
+- Active page highlighting
+- Fully reusable and scalable
 
-Delete products with confirmation modal
+---
 
-Upload product images (multipart/form-data)
+### 🌙 UI / UX
+- Dark / Light mode toggle
+- Loading indicators (spinners)
+- Toast notifications for success & errors
+- Responsive design with Tailwind CSS
 
-🔍 Search
+---
 
-Real-time product search
+## 🧩 Tech Stack
 
-Search integrated with pagination
+- React
+- TypeScript
+- React Router DOM
+- Axios
+- Tailwind CSS
+- React Toastify
+- React Spinners
 
-Automatically resets to page 1 when searching
+---
 
-📄 Pagination (Custom & Reusable)
+## 🗂️ Project Structure
 
-Client-side pagination
-
-Implemented using:
-
-Custom Hook usePagination
-
-Reusable Component Pagination
-
-Dynamic page count based on filtered data
-
-Active page highlighting
-
-Fully integrated with search results
-
-🌙 UI / UX
-
-Dark / Light mode toggle
-
-Loading spinners for pages & actions
-
-Toast notifications for success & errors
-
-Clean and responsive layout (Tailwind CSS)
-
-🧩 Tech Stack
-
-React
-
-TypeScript
-
-React Router DOM
-
-Axios
-
-Tailwind CSS
-
-React Toastify
-
-React Spinners
-
-🗂️ Project Structure
 src/
 │
 ├── Components/
@@ -105,59 +92,61 @@ src/
 │
 └── main.tsx
 
-🔁 Pagination Implementation
-Custom Hook – usePagination
 
-Handles:
+---
 
-Current page
+## 🔁 Pagination Details
 
-Total pages
+### `usePagination` Hook
+- Manages:
+  - Current page
+  - Total pages
+  - Paginated data slice
+- Accepts:
+  - `data`
+  - `itemsPerPage`
+- Returns:
+  - `currentData`
+  - `currentPage`
+  - `totalPages`
+  - `setCurrentPage`
 
-Paginated data slice
+### `Pagination` Component
+- Props:
+  - `totalPages`
+  - `currentPage`
+  - `onPageChange`
+- Highlights active page
+- Fully reusable UI component
 
-Fully reusable across the app
+---
 
-Pagination Component
+## 🧠 Architecture Highlights
 
-Receives:
+- Clean separation of concerns
+- Reusable components & hooks
+- Strong TypeScript typing
+- Scalable and maintainable structure
+- Ready for future backend pagination
 
-totalPages
+---
 
-currentPage
+## 🛠️ Setup & Run
 
-onPageChange
-
-Highlights active page
-
-Clean and accessible UI
-
-🧠 Architecture Highlights
-
-Reusable components & hooks
-
-Separation of concerns (UI / logic)
-
-Type-safe interfaces for all API data
-
-Scalable and maintainable structure
-
-Ready for backend pagination or future enhancements
-
-🛠️ Setup & Run
+```bash
 npm install
 npm run dev
 
-✅ Future Improvements
+📌 Future Enhancements
 
-Backend pagination
+- Server-side pagination
 
-Role-based access control
+- Role-based authorization
 
-Unit tests for hooks & components
+- Unit testing
 
-Image optimization & lazy loading
+- Performance optimizations
 
 👩‍💻 Author
 
-Built with care and clean architecture as a learning & production-ready dashboard project.
+This project was built as a professional, production-ready dashboard with clean architecture and reusable patterns.
