@@ -61,40 +61,6 @@ A modern and professional **Admin Dashboard** built with **React + TypeScript**,
 
 ---
 
-## 🗂️ Project Structure
-
-src/
-│
-├── Components/
-│   ├── Card.tsx
-│   ├── Confirmation.tsx
-│   ├── Pagination.tsx
-│   ├── ProductForm.tsx
-│
-├── Pages/
-│   ├── Auth/
-│   │   ├── Login.tsx
-│   │   ├── Register.tsx
-│   ├── Dashboard/
-│       ├── Products.tsx
-│       ├── CreateProducts.tsx
-│       ├── EditProducts.tsx
-│
-├── contexts/
-│   ├── ThemeContext.tsx
-│   ├── SearchContext.tsx
-│
-├── hooks/
-│   └── usePagination.ts
-│
-├── interfaces/
-│   └── productInterface.ts
-│
-└── main.tsx
-
-
----
-
 ## 🔁 Pagination Details
 
 ### `usePagination` Hook
@@ -137,16 +103,20 @@ src/
 npm install
 npm run dev
 
-📌 Future Enhancements
+## 📌 Future Improvements
 
-- Server-side pagination
+* Role-based access
+* تحسين Error Handling
+* Refresh Token
 
-- Role-based authorization
+---
 
-- Unit testing
+## 👤 Author
 
-- Performance optimizations
+Developed with ❤️ as a learning-focused professional dashboard project.
 
-👩‍💻 Author
+---
 
-This project was built as a professional, production-ready dashboard with clean architecture and reusable patterns.
+## 📄 License
+
+This project is for educational purposes.
