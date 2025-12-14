@@ -123,7 +123,7 @@ const Register = () => {
                         <label htmlFor="profileImg" className="font-semibold block text-black/80">Profile Image:
                         <input type="file" required name="profileImg" id="profileImg" onChange={handlePrewiw} ref={profilImgRef} className="h-10 absolute px-4 top-1/2 left-0 opacity-0 z-20 cursor-pointer w-[90px]"/>
                         <img
-                            src={previwImage || 'src/assets/img/profil.jpg'}
+                            src={previwImage || './img/profil.jpg'}
                             alt="user-img"
                             id="profileImg"
                             className="w-20 h-22 rounded-full cursor-pointer object-contain"
